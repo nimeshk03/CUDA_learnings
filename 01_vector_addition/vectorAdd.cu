@@ -43,6 +43,10 @@ int main(){
     cudaMemcpy(c, d_c, size, cudaMemcpyDeviceToHost);
 
     for (int i = 0; i < n; i++){
+        std::cout << a[i] << " + " << b[i] << " = " << c[i] << std::endl;
+    }
+
+    for (int i = 0; i < n; i++){
         if(c[i] != 3){
             std::cout << "Error at index " << i << std::endl;
             break;
