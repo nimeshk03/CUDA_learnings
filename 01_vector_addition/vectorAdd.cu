@@ -40,9 +40,11 @@ int main(){
 
     vectorAdd<<<blocks, threads>>>(d_a, d_b, d_c, n);
 
+    cudaDeviceSynchronize();
+
     cudaMemcpy(c, d_c, size, cudaMemcpyDeviceToHost);
 
-    for (int i = 0; i < n; i++){
+    for (int i = 0; i < 20; i++){
         std::cout << a[i] << " + " << b[i] << " = " << c[i] << std::endl;
     }
 
