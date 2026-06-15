@@ -16,7 +16,7 @@ nvcc --version
 
 echo
 echo "[2] Compiling $CUDA_FILE..."
-nvcc -O2 "$CUDA_FILE" -o "$OUT"
+nvcc -O2 -arch=sm_75 "$CUDA_FILE" -o "$OUT"
 
 echo
 echo "[3] Running $OUT..."
