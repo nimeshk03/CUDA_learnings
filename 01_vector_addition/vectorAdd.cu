@@ -44,7 +44,7 @@ int main(){
 
     cudaMemcpy(c, d_c, size, cudaMemcpyDeviceToHost);
 
-    for (int i = 0; i < 20; i++){
+    for (int i = 0; i < 10; i++){
         std::cout << a[i] << " + " << b[i] << " = " << c[i] << std::endl;
     }
 
