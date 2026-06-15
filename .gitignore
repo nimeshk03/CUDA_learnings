@@ -1,0 +1,21 @@
+# Build outputs
+build/
+*.out
+*.o
+*.exe
+
+# CUDA temporary files
+*.ptx
+*.cubin
+*.fatbin
+
+# Editor files
+.vscode/
+.idea/
+
+# Python/Colab
+__pycache__/
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
